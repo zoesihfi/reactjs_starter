@@ -32,8 +32,11 @@ function App() {
         <div className="auth-inner">
           <Switch>
             <Route exact path='/' component={Login} />
+            <Route path="/welcome" component={Welcome}/>
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/gameStats" component={GameStats}/>
+            <Route path="/donate" component={Donate}/>
           </Switch>
         </div>
       </div>
