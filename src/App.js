@@ -24,6 +24,12 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
               </li>
+              <li className="nav-item">
+                 <Link className="nav-link" to={"/donate"}>Donate</Link>
+              </li>
+              <li className="nav-item">
+                 <Link className="nav-link" to={"/game-stats"}>Game Status</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -37,6 +43,7 @@ function App() {
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp}/>
             <Route path="/donate" component={Donate} />
+            <Route path="/game-stats" component={GameStats} />
           </Switch>
         </div>
       </div>
