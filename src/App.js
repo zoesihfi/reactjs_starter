@@ -6,8 +6,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/LoginContainer/Login.js";
 import SignUp from "./components/SignUpContainer/SignUp.js";
 import WelcomeScreen from "./components/WelcomeContainer/WelcomeScreen.js";
-import Donate from ".componets/DonateContainer/Donate.js";
-import GameStats from ".componets/GameStatsContainer/GameStats.js";
+import Donate from "./components/DonateContainer/Donate.js"; 
+import GameStats from "./components/GameStatsContainer/GameStats.js";
+
 
 function App() {
   return (<Router>
@@ -32,11 +33,10 @@ function App() {
         <div className="auth-inner">
           <Switch>
             <Route exact path='/' component={Login} />
-            <Route path="/welcome" component={Welcome}/>
+            <Route path="/welcome" component={WelcomeScreen}/>
             <Route path="/sign-in" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
-            <Route path="/gameStats" component={GameStats}/>
-            <Route path="/donate" component={Donate}/>
+            <Route path="/sign-up" component={SignUp}/>
+            <Route path="/donate" component={Donate} />
           </Switch>
         </div>
       </div>
