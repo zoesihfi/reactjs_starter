@@ -8,6 +8,7 @@ import SignUp from "./components/SignUpContainer/SignUp.js";
 import WelcomeScreen from "./components/WelcomeContainer/WelcomeScreen.js";
 import Donate from "./components/DonateContainer/Donate.js"; 
 import GameStats from "./components/GameStatsContainer/GameStats.js";
+import Select from "./components/PlayerVsComSelectionContainer/PlayerVsComSelection.js";
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
               <li className="nav-item">
                  <Link className="nav-link" to={"/game-stats"}>Game Status</Link>
               </li>
+              <li className="nav-item">
+                 <Link className="nav-link" to={"/player-vs-computer"}>Player Vs Computer</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -44,6 +48,7 @@ function App() {
             <Route path="/sign-up" component={SignUp}/>
             <Route path="/donate" component={Donate} />
             <Route path="/game-stats" component={GameStats} />
+            <Route path="/player-vs-computer" component={Select} />
           </Switch>
         </div>
       </div>
