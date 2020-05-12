@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './PlayerVsComSelection.css';
 export default class Select extends Component{
     state = {
         playerVsPlayer: "",
