@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './UserHome.css'; 
-
+import Image from 'react-bootstrap/Image'; 
+import defaultImg from '../../../assets/img/default-profile-image.png';
 
 class UserHome extends Component {
     render() {
