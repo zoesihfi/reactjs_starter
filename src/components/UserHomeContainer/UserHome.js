@@ -18,8 +18,9 @@ import defaultImg from '../../assets/img/default-profile-image.png';
     render() {
         return (
         <Route>
-            <div>
-                <ul>
+            <div className="user-home">
+                
+                    <img scr={defaultImg} alt="default-profile-inmg " />
                 <br></br>   
                     <button className ="user-direct" to="/my-profile">My profile</button>
                 <br></br>
@@ -28,16 +29,16 @@ import defaultImg from '../../assets/img/default-profile-image.png';
                     <button className ="user-direct" to="/friend-requests">Friend Requests</button>
                 <br></br>    
                     <button className ="user-direct" to="/invitations">Invitations</button>
-                 <br></br>    
-                    <button className ="user-direct" to="/donate">Donate</button>
                 <hr></hr>
-                    <button className="user-direct" to="/log-out">Log Out</button>
+                    <button className="user-direct" to="/log-out">Log Out</button>   
+                    <p>
+                       Donate $1 or more to fund our Youth Technology
+                       Learning Program based in Wilmington, DE.</p> 
 
-                </ul>    
+                    <button id="donate-button" to="/donate">Donate</button>
             </div>
 
-            <Switch>
-                <Route exact path='/' component={Login}/> 
+            <Switch> 
                 <Route path="/my-profile" component={UserProfile}/>
                 <Route path="/game-stats" component={GameStats} />
                 <Route path="/friend-requests" component={FriendRequests}/>
