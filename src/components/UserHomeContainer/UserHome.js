@@ -1,33 +1,54 @@
 import React, { Component } from "react";
 import './UserHome.css'; 
 import Image from 'react-bootstrap/Image'; 
-import defaultImg from '../../../assets/img/default-profile-image.png';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
-class UserHome extends Component {
+import UserProfile from "../UserProfileContainer/UserProfile.js";
+import GameStats from "../GameStatsContainer/GameStats.js";
+import FriendRequests from "../FriendRequestsContainer/FriendRequests.js";
+import Invitations from "../InvitationsContainer/Invitations.js";
+import Donate from "../DonateContainer/Donate.js";
+import LogOut from "../LogOutContainer/LogOut.js";
+import Login from "../LoginContainer/Login.js";
+
+import defaultImg from '../../assets/img/default-profile-image.png';
+
+ export default class UserHome extends Component {
     render() {
         return (
-        
+        <Route>
             <div>
                 <ul>
-                    
-                
                 <br></br>   
-                    <button className ="user-direct">My profile</button>
+                    <button className ="user-direct" to="/my-profile">My profile</button>
                 <br></br>
-                    <button className ="user-direct">Game Stats</button>
+                    <button className ="user-direct" to="/game-stats">Game Stats</button>
                <br></br>     
-                    <button className ="user-direct">Friend Requests</button>
+                    <button className ="user-direct" to="/friend-requests">Friend Requests</button>
                 <br></br>    
-                    <button className ="user-direct">Invitations</button>
-                    <hr></hr>
-                    <button className="user-direct">Log Out</button>
+                    <button className ="user-direct" to="/invitations">Invitations</button>
+                 <br></br>    
+                    <button className ="user-direct" to="/donate">Donate</button>
+                <hr></hr>
+                    <button className="user-direct" to="/log-out">Log Out</button>
 
-                </ul>
-
-                
+                </ul>    
             </div>
+
+            <Switch>
+                <Route exact path='/' component={Login}/> 
+                <Route path="/my-profile" component={UserProfile}/>
+                <Route path="/game-stats" component={GameStats} />
+                <Route path="/friend-requests" component={FriendRequests}/>
+                <Route path="/invitations" component={Invitations} />
+                <Route path="/donate" component={Donate} />
+                <Route path="/log-out" component={LogOut} />
+
+               
+            </Switch>
+        </Route>
         );
     }
 }
 
-export default UserHome;
