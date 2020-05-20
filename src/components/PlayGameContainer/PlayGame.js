@@ -12,7 +12,7 @@ export default class ReactRPS extends Component {
             result: ""
             }
         }
-
+    
     render() {
         return(
             <div className = "rps-game">
