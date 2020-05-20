@@ -11,6 +11,7 @@ import Donate from "./components/DonateContainer/Donate.js";
 import GameStats from "./components/GameStatsContainer/GameStats.js";
 import Select from "./components/PlayerVsComSelectionContainer/PlayerVsComSelection.js";
 import UserHome from "./components/UserHomeContainer/UserHome.js";
+import ReactRPS from "./components/PlayGameContainer/PlayGame.js"; 
 
 function App() {
   return (<Router>
@@ -38,6 +39,9 @@ function App() {
               <li className="nav-item">
                  <Link className="nav-link" to={"/user-home"}>User Home</Link>
               </li>
+              <li className="nav-item">
+                 <Link className="nav-link" to={"/play-game"}>Play Game!</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -54,6 +58,7 @@ function App() {
             <Route path="/game-stats" component={GameStats} />
             <Route path="/player-vs-computer" component={Select} />
             <Route path="/user-home" component={UserHome} />
+            <Route path="/play-game" component={ReactRPS} />
           </Switch>
         </div>
       </div>
