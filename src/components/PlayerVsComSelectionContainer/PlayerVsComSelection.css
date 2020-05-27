@@ -1,7 +1,7 @@
 .back-button {
     min-width: 50%;
   margin-right: 0.5em;
-  margin-top: 1.5em;
+  margin-top: 100px;
   padding: 	0.938em;
   border: none;
   border-radius: 30px;
@@ -9,7 +9,7 @@
   color: #fefefe;
   font-weight: bold;
 }
- .select-buttons {
+ .col {
   min-width: 45%;
   margin-right: 0.5em;
   margin-top: 0.5em;

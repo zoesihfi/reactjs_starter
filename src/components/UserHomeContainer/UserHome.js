@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './UserHome.css'; 
-import Image from 'react-bootstrap/Image'; 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; 
 
@@ -20,22 +19,32 @@ import defaultImg from '../../assets/img/default-profile-image.png';
         <Route>
             <div className="user-home">
                 
-                    <img scr={defaultImg} alt="default-profile-inmg " />
-                <br></br>   
-                    <button className ="user-direct" to="/my-profile">My profile</button>
+                    <img src={defaultImg} alt="default-profile-inmg " />
+                <br></br>  
+                <Link to="/my-profile">
+                    <button className ="user-direct">My profile</button>
+                </Link>
                 <br></br>
-                    <button className ="user-direct" to="/game-stats">Game Stats</button>
-               <br></br>     
-                    <button className ="user-direct" to="/friend-requests">Friend Requests</button>
-                <br></br>    
-                    <button className ="user-direct" to="/invitations">Invitations</button>
+                <Link to="/game-stats">
+                    <button className ="user-direct">Game Stats</button>
+                </Link>
+               <br></br>   
+               <Link  to="/friend-requests">
+                    <button className ="user-direct">Friend Requests</button>
+                </Link>
+                <br></br> 
+                <Link to="/invitations">
+                    <button className ="user-direct">Invitations</button>
+                </Link>
                 <hr></hr>
-                    <button className="user-direct" to="/log-out">Log Out</button>   
+                <Link to="/log-out">
+                    <button className="user-direct" to="/log-out">Log Out</button> 
+                </Link>  
                     <p>
                        Donate $1 or more to fund our Youth Technology
                        Learning Program based in Wilmington, DE.</p> 
 
-                    <button id="donate-button" to="/donate">Donate</button>
+                    <Link id="donate-button" to="/donate">Donate</Link>
             </div>
 
             <Switch> 
