@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import BottomNavBar from "../BottomNavBarContainer/BottomNavBar.js";
 export default class GameStats extends Component{
      render() {
         return (
