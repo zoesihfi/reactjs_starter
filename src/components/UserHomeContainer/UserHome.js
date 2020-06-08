@@ -10,7 +10,7 @@ import Invitations from "../InvitationsContainer/Invitations.js";
 import Donate from "../DonateContainer/Donate.js";
 import LogOut from "../LogOutContainer/LogOut.js";
 import Login from "../LoginContainer/Login.js";
-
+import BottomNavBar from "../BottomNavBarContainer/BottomNavBar.js";
 import defaultImg from '../../assets/img/default-profile-image.png';
 
  export default class UserHome extends Component {
@@ -46,7 +46,7 @@ import defaultImg from '../../assets/img/default-profile-image.png';
 
                     <Link id="donate-button" to="/donate">Donate</Link>
             </div>
-
+            <BottomNavBar/>
             <Switch> 
                 <Route path="/my-profile" component={UserProfile}/>
                 <Route path="/game-stats" component={GameStats} />
