@@ -21,6 +21,9 @@ import defaultImg from '../../assets/img/default-profile-image.png';
                 
                     <img src={defaultImg} alt="default-profile-inmg " />
                 <br></br>  
+
+                <div className="row">
+                <div className="col-1">
                 <Link to="/my-profile">
                     <button className ="user-direct">My profile</button>
                 </Link>
@@ -28,25 +31,32 @@ import defaultImg from '../../assets/img/default-profile-image.png';
                 <Link to="/game-stats">
                     <button className ="user-direct">Game Stats</button>
                 </Link>
-               <br></br>   
+                </div>
+
+               <br></br>
+
+               <div className="col-1">   
                <Link  to="/friend-requests">
-                    <button className ="user-direct">Friend Requests</button>
+                    <button className ="user-direct">Friends</button>
                 </Link>
                 <br></br> 
                 <Link to="/invitations">
                     <button className ="user-direct">Invitations</button>
                 </Link>
-                <hr></hr>
-                <Link to="/log-out">
-                    <button className="user-direct" to="/log-out">Log Out</button> 
-                </Link>  
+                </div>
+
+                
+            
+                
+                   
+            </div>
                     <p>
                        Donate $1 or more to fund our Youth Technology
                        Learning Program based in Wilmington, DE.</p> 
 
                     <Link id="donate-button" to="/donate">Donate</Link>
             </div>
-            <BottomNavBar/>
+           
             <Switch> 
                 <Route path="/my-profile" component={UserProfile}/>
                 <Route path="/game-stats" component={GameStats} />

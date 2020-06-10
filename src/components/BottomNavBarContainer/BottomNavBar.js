@@ -1,3 +1,5 @@
+import './BottomNavBar.css';
+
 import React, { Component } from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -29,7 +31,7 @@ export default class BottomNavBar extends Component{
                 <BottomNavigationAction label="GameStats" icon= {<EqualizerIcon/>} />
                 </Link>
 
-                <Link t0="/user-home">
+                <Link to="/user-home">
                 <BottomNavigationAction label="Profile" icon= {<AccountCircleIcon/>} />
                 </Link>
             </BottomNavigation>

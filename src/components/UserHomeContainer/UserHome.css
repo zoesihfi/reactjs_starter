@@ -1,8 +1,8 @@
 .user-direct {
   font-family: sans-serif;
-  min-width: 100%;
+  min-width: 150px;
   margin-top: 10px;
-  padding: 	10px;
+  padding: 30px;
   border: none;
   border-radius: 30px;
   background-color: #818285;
@@ -10,16 +10,30 @@
   font-weight: bold;
 }
 img {
+
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 300px;
-    box-shadow: 5px 5px black;
+    box-shadow: 2px 5px black;
 }
-.col {
+
+.row {
+
+    background-color: #243390;
+    border-radius: 30px;
+    border: 7px solid black;
+}
+.col-1 {
+
+  min-width: 50%;
   float: left;
-  width: 33.33%;
-  padding: 5px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
 }
+
 
 
 .row::after {
@@ -37,11 +51,11 @@ p {
     min-width: 20%;
 }
 #donate-button {
-    background-color: #f5a74f;
+    background-color: #f47d26;
   font-family: sans-serif;
-  min-width: 50%;
+  min-width: 500px;
   margin-top: 5px;
-  padding: 	10px;
+  padding: 	15px;
   border: none;
   color: #fefefe;
   font-weight: bold;
